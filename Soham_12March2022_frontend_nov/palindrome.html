@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Given an integer x, return true if x is palindrome integer.
+
+            An integer is a palindrome when it reads the same backward as forward.
+            
+            For example, 121 is a palindrome while 123 is not.</h1>
+        <script>
+            let num,array,array1=[];
+            num=prompt("Enter a number");
+            array=num.split("");
+            for(i=array.length-1;i>=0;i--)
+            {
+                array1.push(array[i]);
+            }
+             if(array.toString()==array1.toString())
+             {
+                 console.log("Integer is a Palindrome");
+             }
+             else
+             {
+                 console.log("Integer is not a Palindrome");
+             }
+            console.log(array);
+            console.log(array1);
+        </script>
+    </body>
+</html>

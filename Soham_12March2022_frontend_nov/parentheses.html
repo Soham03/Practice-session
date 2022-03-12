@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input id="ipt" type="text" placeholder="Enter a string"> </input>
+        <button type="submit" onclick="handleclick()">Submit</button>
+        <script>
+                 function handleclick()
+                 {
+                let ne=document.getElementById("ipt").value;
+                 let array=[],array1=[];
+                 array=ne.split("");
+                   for(i=0;i<=array.length-1;i++)
+                   {
+                    if(array[i]==="{" || array[i]==="(")
+                    {
+                    array1.push(array[i]);
+                    console.log(array1);
+                    }
+                    else if(array[i]=="}"||array[i]==")")
+                    {
+                        array1.pop();
+                    }
+                   }
+                   console.log(array);
+                   console.log(array1);
+
+
+                   if(array1==0)
+                   {
+                       console.log("Parentheses is satisfied");
+                   }
+                   else{
+                       console.log("Parentheses is not satisfied");
+                   }
+
+
+                }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+     
+    </head>
+    <body>
+        <script>
+            
+            var a = [4,8,1,6,7,1];
+            let min,max,profit;
+            for(i=0;i<a.length;i++)
+            {
+                for(j=0;j<a.length;j++)
+                {
+                    if(a[i]<a[j])
+                    {
+                        min=a[i];
+                    }
+                }                
+            }
+
+            for(i=0;i<a.length;i++)
+            {
+                for(j=0;j<a.length;j++)
+                {
+                    if(a[i]<a[j])
+                    {
+                        max=a[j];
+                    }
+                }                
+            }
+            
+        console.log(min,max);
+        profit=max-min;
+        console.log(profit);
+
+        </script>
+    </body>
+</html>
