@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="number" placeholder="Enter the size of an array" id="value"></input>
+        <button type="submit" onclick="handleclick()">Submit</button>
+        <script>
+            function handleclick()
+            {
+                let num=document.getElementById("value").value;
+                let array1=[];
+
+                for(i=0;i<num;i++)
+                {
+                    array1.push(prompt("Enter the elements of an array"));
+                }
+                for(i=0;i<num;i++)
+                {
+                    for(j=0;j<num;j++)
+                    {
+                        if(i!=j && array1[i]==array1[j])
+                        {
+                               array1.splice(i,1);     
+                               console.log(array1);                           
+                        }
+                    }
+                }
+                console.log("The new array after removing duplicates is "+array1);
+            }
+
+        </script>
+    </body>
+</html>

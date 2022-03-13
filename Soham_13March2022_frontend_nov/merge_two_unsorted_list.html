@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Medium type sum: Merge two unsorted lists</h1>
+        <input id="value1" type="number" placeholder="Enter the length of the first array"></input>
+        <input id="value2" type="number" placeholder="Enter the length of the second array"></input>
+        <button type="submit" onclick="handleclick()">Submit</button>
+    
+        <script>
+            function handleclick()
+            {
+                let num1=document.getElementById("value1").value;
+                let num2=document.getElementById("value2").value;
+                let array1=[];
+                let array2=[];
+                for (i=0;i<num1;i++)
+                {
+                   
+                   array1.push(prompt("Enter the 1st array elements"));       
+                }
+                console.log("Your array 1 is "+array1);
+                for(i=0;i<num2;i++)
+                {
+                    
+                    array2.push(prompt("Enter the 2nd array elements"));
+                }
+                console.log("Your array 2 is "+array2);
+                
+                let array3=[];
+                array3=array1.concat(array2);
+                for(i=0;i<array3.length;i++)
+                {
+                    for(j=0;j<array3.length;j++)
+                    {
+                        if(i<j && array3[i]>array3[j])
+                        {
+                            let temp;
+                            temp=array3[j];
+                            array3[j]=array3[i];
+                            array3[i]=temp;
+                        }
+                    }
+                }
+                console.log("Your merged two sorted array is "+array3);
+            }
+
+            
+
+            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="string" placeholder="Enter a string"></input>
+        <input type="text" id="needle" placeholder="Enter a needle"></input>
+        <button type="submit" onclick={handleclick()}>Submit</button>
+        <script>
+            function handleclick()
+            {
+                let string=document.getElementById("string").value;
+                let needle=document.getElementById("needle").value;
+                let result=string.indexOf(needle);
+                console.log(result);
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Medium type:Divide two integers</h1>
+        <br/>
+        <input type="number" id="dividend" placeholder="Enter a dividend"></input>
+        <input type="number" id="divisor" placeholder="Enter a divisor"></input>
+        <button type="submit" onclick="handleclick()">Submit</button>
+        <script>
+            function handleclick()
+            {
+               
+                let dividend=document.getElementById("dividend").value;
+                let divisor=document.getElementById("divisor").value;
+                let sign=(dividend<0 || divisor<0 ?-1:1 );
+                let quotient=0;
+                dividend=Math.abs(dividend);
+                divisor=Math.abs(divisor);
+              do {
+                  dividend=dividend-divisor;
+                  quotient+=1;
+              }while(dividend>=divisor)
+               if (sign==-1)
+                   quotient=-quotient;
+                console.log("The solution is "+quotient);
+            }
+        </script>
+    </body>
+</html>
