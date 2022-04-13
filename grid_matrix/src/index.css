@@ -11,7 +11,7 @@ h1{
   padding-top: 2%;
 }
 
-#length-input{
+#row-input{
   width:25%;
   margin-left: 40%;
   padding:5px;
@@ -25,7 +25,7 @@ h1{
   margin-bottom: 5%;
   }
 
-#breadth-input{
+#column-input{
 width:25%;  
 width: fit-contents;
 padding:5px;

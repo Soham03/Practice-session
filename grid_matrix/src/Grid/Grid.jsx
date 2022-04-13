@@ -4,13 +4,13 @@ import { TableRow } from "./Table";
 import "../index.css"
 
 export const GridWithRandomAlphabets = (props) => {
-  const { tableArray, length, breadth } = props;
+  const { tableArray, row, column } = props;
   const [array, setArray] = useState([]);
   const [searchedValue, setSearchedValue] = useState(null);
 
   useEffect(() => {
-    if (length !== 0 && breadth !== 0 && tableArray?.length > 0) {
-      setArray(createTableLikeArray(length, breadth, tableArray));
+    if (row !== 0 && column !== 0 && tableArray?.length > 0) {
+      setArray(createTableLikeArray(row, column, tableArray));
     }
   }, [tableArray]);
 
@@ -30,7 +30,7 @@ export const GridWithRandomAlphabets = (props) => {
         <input
           id="search-input"
           type="text"
-          maxLength={1}
+          // maxLength={1}
           value={searchedValue}
           onChange={onHandleSearchChange}
           placeholder="Search Value"
@@ -40,9 +40,9 @@ export const GridWithRandomAlphabets = (props) => {
           onClick={() => {
             setArray(
               createTableLikeArray(
-                length,
-                breadth,
-                searchForValues(array, searchedValue)
+                row,
+                column,
+                searchForValues(array, searchedValue,column)
               )
             );
           }}

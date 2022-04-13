@@ -3,13 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import {GridWithRandomAlphabets} from './Grid/index'
-import SearchAbleGrid from './Grid/index'
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <SearchAbleGrid/>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

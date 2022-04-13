@@ -4,29 +4,29 @@ import { createTableLikeArray, generateArrayForGrid } from "./helpers";
 import { InputFields } from "./InputFields";
 import  '../index.css';
  const SearchAbleGrid = () => {
-  const [length, setLength] = useState(0);
-  const [breadth, setBreadth] = useState(0);
+  const [row, setrow] = useState(0);
+  const [column, setcolumn] = useState(0);
   const [generatedArray, setGeneratedArray] = useState();
 
   useEffect(() => {
-    if (length !== 0 || breadth !== 0) {
-      setGeneratedArray(generateArrayForGrid(length, breadth));
+    if (row !== 0 || column !== 0) {
+      setGeneratedArray(generateArrayForGrid(row, column));
     }
-  }, [length, breadth]);
+  }, [row, column]);
   
   return (
     <>
      <h1>Welcome</h1>
       <InputFields
-        length={length}
-        breadth={breadth}
-        setLength={setLength}
-        setBreadth={setBreadth}
+        row={row}
+        column={column}
+        setrow={setrow}
+        setcolumn={setcolumn}
       />
       <GridWithRandomAlphabets
         tableArray={generatedArray}
-        length={length}
-        breadth={breadth}
+        row={row}
+        column={column}
       />
     </>
   );
