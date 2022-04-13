@@ -46,7 +46,7 @@ function Cards({results}) {
                             <div className="fs-6 fw-bold">{species}</div>
                             <div className="fs-6">Status</div>
                             <div className="fs-6 fw-bold">{status}</div> 
-                            <button className="btn btn-primary my-5" type="submit" onClick={()=>handleClick(x)}>Like</button>
+                            <button className="btn btn-primary my-2" type="submit" onClick={()=>handleClick(x)}>Like</button>
                      
                            </div> 
                         </div>
