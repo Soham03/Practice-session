@@ -38,7 +38,7 @@ function Cards({results}) {
                           <img src={image} className={`${styles.img}`} alt=""/>
                           </div>
                           <div className={styles.flipcardback}>
-                           <div className={styles.content}> 
+                           <div className={`${styles.content} gap-5`}> 
                             <div className="fs-3 fw-bold mb-1" style={{color:"black"}}>{name}</div>
                             <div className="fs-6">Gender</div>
                             <div className="fs-6 fw-bold">{gender}</div>
@@ -46,7 +46,7 @@ function Cards({results}) {
                             <div className="fs-6 fw-bold">{species}</div>
                             <div className="fs-6">Status</div>
                             <div className="fs-6 fw-bold">{status}</div> 
-                            <button className="btn btn-primary my-2" type="submit" onClick={()=>handleClick(x)}>Like</button>
+                            <button className="btn btn-primary my-1" type="submit" onClick={()=>handleClick(x)}>Like</button>
                      
                            </div> 
                         </div>
